@@ -1,0 +1,60 @@
+@font-face {
+    font-family: Figtree;
+    src: url("$lib/Figtree/Figtree-VariableFont_wght.ttf");
+}
+
+:root{
+	--hue: 220;
+	--sat: 6%;
+	--strt: 94%;
+	--diff: -6%;
+
+	--accent: hsl(var(--hue), 48%, 48%);
+	--accent-transparent: hsl(var(--hue), 48%, 48%, 40%);
+    --true-accent: hsl(255, 89%, 64%);
+	--contrast: hsl(var(--hue), 0%, calc(100% - var(--strt)));
+	--contrast-transparent: hsl(var(--hue), 0%, 92%, 40%);
+	--bg: hsl(var(--hue), var(--sat), calc(var(--strt) + (0 * var(--diff))));
+	--bg-transparent: hsl(var(--hue), var(--sat), calc(var(--strt) + (0 * var(--diff))), 40%);
+	--l05: hsl(var(--hue), var(--sat), calc(var(--strt) + (0.5 * var(--diff))));
+	--l1: hsl(var(--hue), var(--sat), calc(var(--strt) + (1 * var(--diff))));
+	--l2: hsl(var(--hue), var(--sat), calc(var(--strt) + (2 * var(--diff))));
+	--l3: hsl(var(--hue), var(--sat), calc(var(--strt) + (3 * var(--diff))));
+	--l4: hsl(var(--hue), var(--sat), calc(var(--strt) + (4 * var(--diff))));
+	--l5: hsl(var(--hue), var(--sat), calc(var(--strt) + (5 * var(--diff))));
+	--l6: hsl(var(--hue), var(--sat), calc(var(--strt) + (6 * var(--diff))));
+    --green: hsl(120, 40%, 80%);
+    --red: hsl(0, 40%, 80%);
+
+	--inline-moat: 15vw;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root{
+		--strt: 8%;
+		--diff: 6%;
+        --green: hsl(120, 40%, 20%);
+        --red: hsl(0, 40%, 20%);
+	}
+}
+
+@media (orientation: portrait) {
+    :root{
+        --inline-moat: 5vw;
+    }
+}
+
+body{
+    height: 100%;
+    margin: 0;
+    background: var(--bg);
+    font-size: 1rem;
+    font-family: Figtree !important;
+    color: var(--contrast);
+    overflow: hidden;
+}
+
+a,button,input{
+    all: unset;
+    display: block;
+}

@@ -1,2 +1,24 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<!-- created by Aaron Meche -->
+<script>
+
+</script>
+
+<!--  -->
+
+<div class="page">
+    <div class="heading">Main Page</div>
+    <div class="message">This is the main page of this web application</div>
+</div>
+
+<!--  -->
+
+<style>
+    .page{
+        padding: 2rem;
+    }
+    .page .heading{
+        margin-bottom: 0.5rem;
+        font-size: 24pt;
+        font-weight: 600;
+    }
+</style>
