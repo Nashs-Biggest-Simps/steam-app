@@ -8,6 +8,12 @@ import { db } from '$lib/data'
 import { app } from '$lib/firebase';
 
 export const auth = getAuth(app);
+export function checkForUser() {
+    let userLoggedIn = false
+    const unsub = db.subscribe(data => { if (data.user) userLoggedIn = true })
+    unsub()
+    return userLoggedIn
+}
 
 // Only run the listener in the browser (prevents SSR issues)
 if (typeof window !== 'undefined') {

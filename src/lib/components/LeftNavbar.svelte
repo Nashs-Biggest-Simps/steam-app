@@ -14,7 +14,7 @@
 
 <!--  -->
 
-<a href={resolve("/app")} class="logo">steam app</a>
+<a href={resolve("/app")} class="logo">app</a>
 
 <!--  -->
 

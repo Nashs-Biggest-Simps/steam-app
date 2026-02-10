@@ -1,10 +1,11 @@
 import { writable } from 'svelte/store'
 
 let initial_db = {
-    user: {}
+    user: {},
+    sid: null
 }
 
-const app_title = "steam.0001"
+const app_title = "steam.0002"
 const storage_ref = `localDB-${app_title}`
 
 const storage = {

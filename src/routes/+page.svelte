@@ -1,5 +1,11 @@
 <!-- created by Aaron Meche -->
 <script>
+    import { checkForUser } from "$lib/auth";
+    import { onMount } from "svelte";
+
+    onMount(() => {
+        console.log(checkForUser())
+    })
 
 </script>
 
